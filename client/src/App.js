@@ -1,7 +1,7 @@
 import { BrowserRouter, Navigate, Routes, Route} from 'react-router-dom';
-import homepage from 'scenes/homepage';
-import loginpage from 'scenes/loginpage';
-import profilepage from 'scenes/profilepage';
+import Homepage from 'scenes/Homepage';
+import Loginpage from 'scenes/Loginpage';
+import Profilepage from 'scenes/Profilepage';
 import {useMemo} from 'react';
 import {useSelector} from 'react-redux';
 import {CssBaseline, ThemeProvider} from '@mui/material';
@@ -22,9 +22,9 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Routes>
-            <Route path="/" element={<loginpage/>} />
-            <Route path="/home" element={<homepage/>} />
-            <Route path="/profile/:userId" element={<profilepage/>} />
+            <Route path="/" element={<Loginpage/>} />
+            <Route path="/home" element={<Homepage/>} />
+            <Route path="/profile/:userId" element={<Profilepage/>} />
         </Routes>
         </ThemeProvider>
       </BrowserRouter>
